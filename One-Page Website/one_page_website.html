@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wildlife Animals Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        img {
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        form input, form textarea {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#videos">Videos</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home">
+    <h1>Welcome to Wildlife Animals</h1>
+    <p>
+        Explore amazing animals from around the world including lions, elephants,
+        tigers, and more. This page shows pictures, videos, and a contact form.
+    </p>
+</section>
+
+<!-- GALLERY SECTION -->
+<section id="gallery">
+    <h2>Animal Gallery</h2>
+
+    <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="Lion">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg" alt="Elephant">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg" alt="Tiger">
+    </div>
+</section>
+
+<!-- VIDEOS SECTION -->
+<section id="videos">
+    <h2>Wildlife Videos</h2>
+
+    <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/1G4isv_Fylg"
+        title="Wildlife Video"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<!-- CONTACT FORM SECTION -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Wildlife Website | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
