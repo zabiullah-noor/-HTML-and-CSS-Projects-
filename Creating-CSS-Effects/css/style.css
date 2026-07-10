@@ -1,10 +1,13 @@
-/*navbar*/
+/* ===========================
+   Navigation Bar
+=========================== */
+
 .nav-bar{
     position: sticky;
     top: 0;
-    z-index: 4;/*sets the position of the navbar in the stack
-    layer so it is on top */
+    z-index: 4; /* Keeps the navigation bar above other content */
 }
+
 ul{
     list-style-type: none;
     background-color: #363636;
@@ -13,9 +16,12 @@ ul{
     display: flex;
     align-items: center;
 }
+
+/* Navigation Links */
+
 a{
     display: block;
-    font-family: Calibri, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 23px;
     font-weight: 600;
     color: white;
@@ -27,23 +33,27 @@ a{
     transition: background-color 0.4s, color 0.3s ease-in;
 }
 
+/* Hover effect for navigation */
 
-/*navbar rollover effects*/
-a:hover, .drop:hover {
-    background-color: rgb(228, 159, 0);
-    color: rgb(49, 49, 49);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s, color 0.3s ease-in;
+a:hover,
+.drop:hover{
+    background-color: rgb(228,159,0);
+    color: rgb(49,49,49);
+    box-shadow: 0px 8px 16px rgba(0,0,0,.7);
 }
 
+/* ===========================
+   Dropdown Menu
+=========================== */
 
 .rollover-menu{
     position: absolute;
     display: none;
-    
     background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0,0,0,.2);
 }
+
+/* Show dropdown when hovering */
 
 .drop:hover .rollover-menu{
     display: block;
@@ -53,123 +63,156 @@ a:hover, .drop:hover {
     color: #363636;
 }
 
+/* Dropdown hover colors */
+
 .rollover-menu a:hover{
     color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s, color 0.3s ease-in;
-}
-.rollover-menu a:hover:nth-child(1){
-    background-color: rgb(117, 20, 20);
-}
-.rollover-menu a:hover:nth-child(2){
-    background-color: rgb(87, 7, 7);
-}
-.rollover-menu a:hover:nth-child(3){
-    background-color: rgb(48, 2, 2);
 }
 
+.rollover-menu a:hover:nth-child(1){
+    background-color: rgb(117,20,20);
+}
+
+.rollover-menu a:hover:nth-child(2){
+    background-color: rgb(87,7,7);
+}
+
+.rollover-menu a:hover:nth-child(3){
+    background-color: rgb(48,2,2);
+}
+
+/* ===========================
+   Footer
+=========================== */
+
 footer{
-    background-color: #363636;
+    background-color:#363636;
     margin:30px -10px -10px -10px;
-    overflow: hidden;
-    height: 70px;
+    overflow:hidden;
+    height:70px;
 }
 
 .footer-text{
-    color: rgb(228, 159, 0);
-    font-family: Calibri, sans-serif;
-    font-size: 23px;
-    font-weight: 400;
-    text-align: center;
+    color:rgb(228,159,0);
+    font-family:'Poppins', sans-serif;
+    font-size:23px;
+    font-weight:400;
+    text-align:center;
 }
+
+/* ===========================
+   Images
+=========================== */
 
 img{
-    width: 700px;
-    height: 500px;
+    width:700px;
+    height:500px;
 }
+
+/* Centers images on the page */
 
 .image-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    padding-top: 120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:120px;
 }
+
+/* Adds extra spacing below the third image */
+
 #image3{
-    padding-bottom: 170px;
+    padding-bottom:170px;
 }
+
+/* ===========================
+   Overlay Effect
+=========================== */
 
 .overlay{
-    position: absolute;
-    width: 700px;
-    height: 550px;
-    background-color: rgba(90,90,90);
-    opacity: 0;
-    transition: opacity 0.5s ease;   
+    position:absolute;
+    width:700px;
+    height:550px;
+    background-color:rgba(90,90,90);
+    opacity:0;
+    transition:opacity .5s ease;
 }
 
+/* Fade in overlay */
+
 .overlay:hover{
-    opacity: 0.6;
+    opacity:.6;
 }
+
+/* ===========================
+   Zoom Effect
+=========================== */
+
 .zoom{
-    transform: scale(1);
-    transition: transform 0.5s ease-out;
-    z-index: 3;
+    transform:scale(1);
+    transition:transform .5s ease-out;
+    z-index:3;
 }
 
 .zoom:hover{
-    transform: scale(1.5);
-    transition: transform 0.5s ease-out;
-    
+    transform:scale(1.5);
 }
 
+/* ===========================
+   Circle Burst Effect
+=========================== */
+
 .circle{
-    position: relative;
-    margin: 0px;
-    overflow: hidden;
+    position:relative;
+    margin:0;
+    overflow:hidden;
 }
 
 .circle::before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    opacity: 0;
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    border-radius:50%;
+    opacity:0;
     top:50%;
     left:50%;
-    transform: translate(-50%, -50%);
-    animation: burst-reverse 1s;
-}   
+    transform:translate(-50%,-50%);
+    animation:burst-reverse 1s;
+}
+
+/* Start burst animation on hover */
 
 .circle:hover::before{
-    animation: burst 1s;
-    animation-fill-mode: forwards;
+    animation:burst 1s forwards;
 }
+
+/* Burst grows outward */
 
 @keyframes burst{
     0%{
-        opacity: 0.2;
-        background-color: rgba(224,224,224);
+        opacity:.2;
+        background-color:rgba(224,224,224);
     }
     100%{
-        width: 300%;
-        height: 300%;
-        opacity: 0.7;
-        background-color: rgba(224,224,224);
+        width:300%;
+        height:300%;
+        opacity:.7;
+        background-color:rgba(224,224,224);
     }
 }
 
+/* Reverse animation */
+
 @keyframes burst-reverse{
     0%{
-        width: 300%;
-        height: 300%;
-        opacity: 0.7;
-        background-color: rgba(224,224,224);
+        width:300%;
+        height:300%;
+        opacity:.7;
+        background-color:rgba(224,224,224);
     }
+
     100%{
-        opacity: 0.2;
-        background-color: rgba(224,224,224);
-    
+        opacity:.2;
+        background-color:rgba(224,224,224);
     }
 }
